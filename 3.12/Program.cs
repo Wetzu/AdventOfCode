@@ -37,22 +37,13 @@ if (File.Exists(path))
             IEnumerable<char> concat = new List<char>();
             foreach (var lineToParse in lines)
             {
-                var itemsCount = lineToParse.Length / 2;
-                var compA = lineToParse.Take(itemsCount);
-                var compB = lineToParse.TakeLast(itemsCount);
-
-                var compAChars = compA.Distinct();
-                var compBChars = compB.Distinct();
-
-                concat = concat.Concat(compAChars).Concat(compBChars);
-
+                concat = concat.Concat(lineToParse.Distinct());
             }
 
-            lines.Clear();
-
             var group = concat.GroupBy(e => e);
-            var doubles = group.Where(e => e.Count() > 2);
-            sum += GetPrio(doubles.First().Key);
+            var doubles = group.Where(e => e.Count() == lines.Count).Select(e => e.Key);
+            sum += GetPrio(doubles.FirstOrDefault());
+            lines.Clear();
         }
     }
 }
