@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using _5._12;
 
-var path = @"C:\Users\jessig\Desktop\AdventOfCode\5.12\input.txt";
+var path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + @"\input.txt";
 
 var stacks = Util.LoadStacks(path);
 Console.WriteLine("Initial State");

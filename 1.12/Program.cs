@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using _1._12;
 
-var elfs = Util.LoadElfs(@"C:\Users\jessig\Desktop\AdventOfCode\1.12\input.txt");
+var elfs = Util.LoadElfs(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + @"\input.txt");
 
 elfs = elfs.OrderByDescending(x => x.TotalCalories);
 

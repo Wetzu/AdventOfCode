@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-var path = @"C:\Users\jessig\Desktop\AdventOfCode\3.12\input.txt";
+var path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + @"\input.txt";
 
 int sum = 0;
 

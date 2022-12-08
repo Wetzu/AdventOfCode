@@ -1,5 +1,5 @@
 ﻿
-var path = @"C:\Users\jessig\Desktop\AdventOfCode\4.12\input.txt";
+var path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + @"\input.txt";
 using var reader = new StreamReader(path);
 
 var pairs = new List<((int Start, int End), (int Start, int End))>();

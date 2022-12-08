@@ -1,6 +1,6 @@
 ﻿using _2._12;
 
-var plays = Util.LoadStrategiesPart2(@"C:\Users\jessig\Desktop\AdventOfCode\2.12\input.txt");
+var plays = Util.LoadStrategiesPart2(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + @"\input.txt");
 
 var adjustedPlays = new List<(Move Challenge, Move Response)>();
 
